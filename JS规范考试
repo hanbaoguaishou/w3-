@@ -121,10 +121,10 @@ D.const hasBarProperty = foo.hasOwnProperty('bar');
 √D.禁止出现多个连续空格
 
 8.以下程序执行会导致什么结果（） // 'use strict' setTimeout(function() { this.name = 'hello' });
-√A.正常执行不会报错
-B.非严格模式下会报错，找不到this
+A.正常执行不会报错
+√B.非严格模式下会报错，找不到this
 √C.严格模式下回报错，找不到this
-√D.无论严格模式还是非严格模式，浏览器setTimeOut内的this永远指向window,执行结果是在window上挂载了一 个属性 name=hello 造成内存泄漏
+D.无论严格模式还是非严格模式，浏览器setTimeOut内的this永远指向window,执行结果是在window上挂载了一 个属性 name=hello 造成内存泄漏
 
 9.禁止使用（）函数来处理来自外部的不可信数据。
 √A.setInterval()
@@ -149,7 +149,7 @@ D.eval()
 √A.不要使用 arguments，可以选择 rest 语法替代
 √B.总是将默认参数放在最后
 √C.给函数的参数指定默认值
-D.不要把方法的入参当作工作变量/临时变量
+√D.不要把方法的入参当作工作变量/临时变量
 
 13.关于DOM操作，下列说法正确的是:()
 √A.在满足业务特性需求的情况下，减少DOM对象的动态创建和删除
@@ -216,6 +216,19 @@ D.class foo { func() { return function () { console.log(this); }; } }
 √B.抛出的异常应该是Error错误或Error的子类，永远不要抛出字符串或其他对象。
 C.构造异常时可以不使用new。
 √D.有时候捕获了异常，什么也不做是正确的，但是应该增加注释说明原因。
+
+24.下列关于空行，下列正确的是：()
+√A.逻辑相对独立的代码块之间增加空行
+√B.return语句前增加空行
+√C.多行变量声明后面增加空行
+D.可使用连续空行
+
+25.下列关于模块的描述中，正确的有：()
+√A.import的三方件需要加入到package.json依赖中
+√B.import不要包括JavaScript文件扩展名
+C.同一个文件中，可多次import同一个模块
+D.代码中总是使用ECMAScript 6标准的模块(import/export)方式
+√E.模块import的顺序依次为内置模块（如：Nodejs模块）、外部模块、内部模块
 
 
 
