@@ -2,6 +2,9 @@
 1.在任何打开花括号 { 之前增加空格，包括在作为函数的第一个参数或数组中的第一个元素时，对象之前也要加空格
 错误
 
+2.推荐使用如const num = .5; 的简便写法
+错误
+
 单选
 1.使用ES6编码的Web前端项目中，使用模块化机制正确且符合编程规范的是（）
 √A.import foo from './foo';
@@ -83,9 +86,9 @@ C.str2 str3
 
 2.关于 CSS 盒模型，说法正确的是（）
 √A.在 IE 模型中，如果你给盒设置width和height，实际设置的是显示区域content大小，不包含margin,border,padding
-B.CSS 盒模型分为标准模型和IE模型
+√B.CSS 盒模型分为标准模型和IE模型
 √C.标准模型可以通过设置box-sizing: border-box转换为IE模型
-√D.模型定义了盒的每个部分 margin, border, padding, 和 content
+D.模型定义了盒的每个部分 margin, border, padding, 和 content
 
 3.数组类型的使用过程，正确的有：()
 √A.向数组添加元素时使用 Arrary#push 替代直接下标赋值
@@ -106,10 +109,10 @@ B.攻击者难以直接接触磁盘数据，因此本地数据是完全可信的
 √D.攻击者总是可以篡改网络上的报文, 因此不要假定报文来自可信设备，就忽略输入校验。
 
 6.以下符合规范的写法的是（）
-A.const good = { foo: 3, bar: 4, 'data-blah': 5, };
-√B.const obj = { set name(value) { this.nameVal = value; } }
+√A.const good = { foo: 3, bar: 4, 'data-blah': 5, };
+B.const obj = { set name(value) { this.nameVal = value; } }
 √C.const original = { age: 1, bee: 2 }; const copy = { ...original, cat: 3 };
-√D.const hasBarProperty = foo.hasOwnProperty('bar');
+D.const hasBarProperty = foo.hasOwnProperty('bar');
 
 7.下列关于空格的使用中，正确的有：()
 √A.数组的括号内不要有空格
@@ -195,5 +198,25 @@ D.function fn(a,b) { if (a+b === 0.3){ // do something } else { // do something 
 B.必须用英文单词命名，不允许出现中文拼音
 √C.能清晰的表达意图
 D.尽量用缩写
+
+21.在对象的使用过程中，下列正确的有：()
+√A.推荐在对象字面量中使用方法简写
+√B.尽量在一个地方定义对象的所有属性
+√C.使用点号来访问对象的属性，只有属性是动态的时候使用 []
+D.可以修改内置对象的原型，或向原型添加方法
+
+22.根据华为JS编程规范，关于箭头函数和上下文绑定，推荐使用（）
+√A.class foo { func() { return () => { console.log(this); }; } }
+√B.class foo { func() { const self = this; return () => { console.log(self); }; } }
+√C.function bar() { console.log(this); } class foo { func() { return bar.bind(this); } }
+D.class foo { func() { return function () { console.log(this); }; } }
+
+23.下列关于异常的使用，正确的有：()
+√A.自定义异常是在函数中传递附加错误信息的好方法，应在默认异常的错误类型不满足的情况下使用自定义异常。
+√B.抛出的异常应该是Error错误或Error的子类，永远不要抛出字符串或其他对象。
+C.构造异常时可以不使用new。
+√D.有时候捕获了异常，什么也不做是正确的，但是应该增加注释说明原因。
+
+
 
 
