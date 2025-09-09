@@ -40,9 +40,9 @@ B.用null初始化
 
 7.给定以下URL，下列表达式为 true 的是（） http://www.huawei.com:8001/test#test?key=value
 A.location.protocol === 'http://'
-B.location.pathname === '/test'
+√B.location.pathname === '/test'
 C.location.host === 'www.huawei.com'
-√D.location.search === '?key=value'
+D.location.search === '?key=value'
 
 8.链式调用对象方法时，一行最多调用()次，否则需要换行
 √A.4
@@ -67,11 +67,18 @@ C.3
 B.var hasBarProperty = foo.hasOwnProperty("bar");
 C.var isPrototypeOfBar = foo.isPrototypeOf(bar);
 
+12.以下代码，在Chrome浏览器控制台输出结果是（） var str = "str2"; setTimeout(() => { let str = "str1"; let obj = { str: "str3", getStr() { return this.str; }, }; console.log(obj.getStr()); console.log(obj.getStr.call(this)); }, 0);
+A.str3 str1
+B.str2 str1
+C.str2 str3
+√D.str3 str2
+
+
 多选
 1.当插入不可信数据到（）时，需要先转义。
-A.执行环境的CSS属性上下文
+√A.执行环境的CSS属性上下文
 √B.执行环境上下文的HTML当中
-C.事件处理程序和执行环境中javaScript上下文中
+√C.事件处理程序和执行环境中javaScript上下文中
 √D.到执行环境中的HTML 属性上下文
 
 2.关于 CSS 盒模型，说法正确的是（）
@@ -164,4 +171,29 @@ B.var redirectURL ="http://www.example.com/abc.jsp?parm1=test1"; var characterPa
 A.尽量用代码来解释自己
 √B.保证注释与代码一致，避免产生误导
 √C.注释应该是描述代码怎么做，而不是解释代码的意图
+
+17.关于数组操作，说法正确的是（）
+A.可使用for-in遍历数组
+√B.数组遍历优先使用Array对象方法，如：forEach()、map()
+√C.不要在forEach循环里进行元素的 remove/add 操作
+√D.向数组添加元素时使用 Arrary.push 替代直接赋值
+
+18.针对JS语言规范，以下写法错误的是（）
+√A.let add = new Function('a','b','return a + b');
+√B.let x = new Boolean(false); if (x) { alert('hi'); }
+C.function Foo() { this.bar = ""; this.eat = function () { }; }
+D.function fn(a,b) { if (a+b === 0.3){ // do something } else { // do something } } const a = 0.1; const b = 0.2; fn(a,b);
+
+19.变量的命名规范，下列正确的是：()
+√A.避免使用否定的布尔变量名
+√B.缩写词应始终全部大写或全部小写
+√C.不要用保留字作用键名或者变量名，请用保留字的同义词
+√D.React组件类型的变量用小驼峰
+
+20.好的命名有如下哪些特征：()
+√A.避免造成误导
+B.必须用英文单词命名，不允许出现中文拼音
+√C.能清晰的表达意图
+D.尽量用缩写
+
 
